@@ -1,6 +1,6 @@
 # Maintainer: hog185 <hogman12333@gmail.com>
 pkgname=lufus-git
-pkgver=r209.5c9a10c
+pkgver=r211.f04658c
 pkgrel=1
 pkgdesc="Physical drive imaging and formatting utility for Linux written in Python"
 arch=('any')
@@ -11,6 +11,7 @@ depends=(
     'python-psutil'
     'python-pyqt6'
     'python-pyudev'
+    'python-platformdirs'
 )
 makedepends=(
     'git'
@@ -36,6 +37,8 @@ build() {
 package() {
     cd "$pkgname"
     python -m installer --destdir="$pkgdir" dist/*.whl
+    mkdir -p "$pkgdir/usr/lib/python3.14/site-packages/lufus/gui/"
+    cp -r src/lufus/gui/themes "$pkgdir/usr/lib/python3.14/site-packages/lufus/gui/"
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
     install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README"
     install -Dm644 ../lufus.desktop "$pkgdir/usr/share/applications/lufus.desktop"
