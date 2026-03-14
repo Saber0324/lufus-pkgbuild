@@ -1,6 +1,6 @@
 # Maintainer: hog185 <hogman12333@gmail.com>
 pkgname=lufus-git
-pkgver=r199.c2b2f7d
+pkgver=r209.5c9a10c
 pkgrel=1
 pkgdesc="Physical drive imaging and formatting utility for Linux written in Python"
 arch=('any')
@@ -39,7 +39,7 @@ package() {
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
     install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README"
     install -Dm644 ../lufus.desktop "$pkgdir/usr/share/applications/lufus.desktop"
-
+    install -Dm644 src/lufus/gui/assets/lufus.png "$pkgdir/usr/share/icons/hicolor/256x256/apps/lufus.png"
     install -Dm755 /dev/stdin "$pkgdir/usr/bin/lufus" << 'EOF'
 #!/usr/bin/env python
 from lufus.__main__ import main
