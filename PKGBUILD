@@ -1,10 +1,10 @@
 # Maintainer: hog185 <hogman12333@gmail.com>
 pkgname=lufus-git
-pkgver=r211.f04658c
+pkgver=r358.b52c3ba
 pkgrel=1
 pkgdesc="Physical drive imaging and formatting utility for Linux written in Python"
 arch=('any')
-url="https://github.com/Hog185/Lufus"
+url="https://github.com/Saber0324/Lufus"
 license=('MIT')
 depends=(
     'python'
@@ -12,6 +12,10 @@ depends=(
     'python-pyqt6'
     'python-pyudev'
     'python-platformdirs'
+    'dosfstools'
+    'ntfs-3g'
+    'exfatprogs'
+    'e2fsprogs'
 )
 makedepends=(
     'git'
@@ -20,7 +24,7 @@ makedepends=(
 )
 provides=('lufus')
 conflicts=('lufus')
-source=("$pkgname::git+https://github.com/Hog185/Lufus.git"
+source=("$pkgname::git+https://github.com/Saber0324/Lufus.git"
         "lufus.desktop")
 sha256sums=('SKIP' 'SKIP')
 
@@ -37,8 +41,6 @@ build() {
 package() {
     cd "$pkgname"
     python -m installer --destdir="$pkgdir" dist/*.whl
-    mkdir -p "$pkgdir/usr/lib/python3.14/site-packages/lufus/gui/"
-    cp -r src/lufus/gui/themes "$pkgdir/usr/lib/python3.14/site-packages/lufus/gui/"
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
     install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README"
     install -Dm644 ../lufus.desktop "$pkgdir/usr/share/applications/lufus.desktop"
