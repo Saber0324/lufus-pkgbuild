@@ -4,7 +4,7 @@ pkgver=r358.b52c3ba
 pkgrel=1
 pkgdesc="Physical drive imaging and formatting utility for Linux written in Python"
 arch=('any')
-url="https://github.com/Saber0324/Lufus"
+url="https://github.com/Hog185/Lufus"
 license=('MIT')
 depends=(
     'python'
@@ -24,7 +24,7 @@ makedepends=(
 )
 provides=('lufus')
 conflicts=('lufus')
-source=("$pkgname::git+https://github.com/Saber0324/Lufus.git"
+source=("$pkgname::git+https://github.com/Hog185/Lufus.git"
         "lufus.desktop")
 sha256sums=('SKIP' 'SKIP')
 
