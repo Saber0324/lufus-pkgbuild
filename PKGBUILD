@@ -1,4 +1,3 @@
-# Maintainer: Hog185 <example@example.com>
 pkgname=lufus
 pkgver=1.0.0_beta1
 pkgrel=1
@@ -26,10 +25,12 @@ makedepends=(
     'python-installer'
 )
 source=(
-    "$pkgname-$pkgver.tar.gz::https://github.com/Hog185/Lufus/archive/refs/heads/main.tar.gz"
+    "$pkgname-$pkgver.tar.gz::https://github.com/Hog185/Lufus/archive/refs/tags/v1.0.0b1.tar.gz"
     "lufus.desktop"
 )
-sha256sums=('SKIP' 'SKIP')
+sha256sums=('8a711b7c4be1fcd6a1fbb57217f32bc3e5ca7c48baf6454bbbf8956c664dfe46'
+            'b883901dc9f8b4baf354976c3782a8c3c14e0fe77b6d744479fa3a6a797d876c')
+)
 
 build() {
     cd "Lufus-1.0.0b1"
