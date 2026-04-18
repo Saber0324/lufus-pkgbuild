@@ -20,7 +20,7 @@ makepkg -si
 ```
 
 Now available in the AUR as "lufus". 
-downloaded with your preferred AUR helper. 
+Download with your preferred AUR helper. 
 
 ```bash
 yay -S lufus
