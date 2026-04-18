@@ -19,3 +19,11 @@ cd lufus-pkgbuild
 makepkg -si
 ```
 
+Now available in the AUR as "lufus". 
+downloaded with your preferred AUR helper. 
+
+```bash
+yay -S lufus
+paru -S lufus
+```
+
