@@ -1,3 +1,5 @@
+# Maintainer: Saber0324 <saber 0324 at proton dot me>
+# Contributor: Hog185 <hogman12333 at gmail dot com>
 pkgname=lufus
 pkgver=1.0.0_beta1
 pkgrel=1
