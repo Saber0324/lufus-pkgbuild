@@ -30,7 +30,7 @@ source=(
   "$pkgname-$pkgver.tar.gz::https://github.com/Hog185/Lufus/archive/refs/tags/v1.0.0b1.1.tar.gz"
   "lufus.desktop"
 )
-sha256sums=('SKIP'
+sha256sums=('192a2eae589abb689e5d0be1f5a1adb74c8dbc16e69cfc6b4f540cdc55d2b07b'
   'b883901dc9f8b4baf354976c3782a8c3c14e0fe77b6d744479fa3a6a797d876c')
 build() {
   cd "Lufus-1.0.0b1.1"
